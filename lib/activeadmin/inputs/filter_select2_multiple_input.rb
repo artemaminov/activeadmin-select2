@@ -2,15 +2,15 @@ module ActiveAdmin
   module Inputs
     class FilterSelect2MultipleInput < Formtastic::Inputs::SelectInput
 
-     include ActiveAdmin::Inputs::Filters::Base
+      include ActiveAdmin::Inputs::FilterBase
 
-     def input_name
+      def input_name
         "#{super}_in"
       end
 
       def extra_input_html_options
         {
-          :class => 'select2-input', :multiple => true
+            :class => 'select2-input', :multiple => true
         }
       end
 
